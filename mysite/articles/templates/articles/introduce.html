@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block body %}
+<h1>introduce 페이지</h1>
+<hr>
+<p>이름 : <input type="text"></p>
+<p>나이 : <input type="text"></p>
+<hr>
+<a href="{% url 'articles:index' %}">back</a>
+{% endblock %}
