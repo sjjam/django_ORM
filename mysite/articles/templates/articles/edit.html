@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block body %}
+<h1>수정 페이지</h1>
+<form action="{% url 'articles:update' article.pk %}" method="GET">
+  <h3>{{ article.pk }}번째 글</h3>
+  <p>제목 : <input type="text" value="{{ article.title }}" name="title"></p>
+  <p>내용 : <input type="text" value="{{ article.content }}" name="content"></p>
+  <input type="submit" value="수정">
+</form>
+{% endblock %}

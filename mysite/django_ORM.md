@@ -58,6 +58,12 @@ Article.objects.filter(title__startswith='SE')
 # 특정 문자열로 끝나는가
 Article.objects.filter(content__endswith='ha')
 ```
+**ASC / DESC**
+```python
+Article.objects.all().order_by('pk')
+Article.objcets.all().order_by('-pk')
+Article.objects.all()[::-1]
+```
 ---
 ## UPDATE
 **UPDATE articles_article SET title='byebye' WHERE id=1**
